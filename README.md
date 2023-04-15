@@ -24,7 +24,8 @@ npm init -y
 ```
 4. 프로젝트 상위에 .gitignore 파일을 생성한다.
 
-5. .gitignore 파일안에 <https://www.toptal.com/developers/gitignore/api/node>를 복사하여 넣어준다.   (기본적으로 제네레이트 해주는 것이고, 필요한것은 따로 추가해도된다.)
+5. .gitignore 파일안에 <https://www.toptal.com/developers/gitignore/api/node>를 복사하여 넣어준다.   
+(기본적으로 제네레이트 해주는 것이고, 필요한것은 따로 추가해도된다.)
 
 6. 타입스크립트 설치 및 설정
 ```bash
@@ -48,7 +49,7 @@ npm i -D eslint
 npx eslint --init
 ```
 
-9. .eslintrc.js 파일을 수정한다.
+9. .eslintrc.js 파일을 수정한다.   
 아직 jest를 설치하지 않았지만, 설치하여 사용할 예정이기에 jest옵션을 지금 추가해준다.
 ```bash
 module.exports = {
