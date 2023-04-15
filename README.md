@@ -10,7 +10,6 @@
 * node.js는 LTS버전으로 설치
 
 ### TypeScript + React + Jest + ESLint + Parcel 개발 환경 세팅
-
 1. 먼저, 프로젝트 폴더를 준비한다.
 ```bash
 mkdir my-app
@@ -43,15 +42,14 @@ npx tsc --init
 ```
 
 8. ESLint 설치 및 설정
-
-### ESLint 확장프로그램도 같이 설치한다.
+##### ESLint 확장프로그램도 같이 설치한다.
 ```bash
 npm i -D eslint
 npx eslint --init
 ```
 
 9. .eslintrc.js 파일을 수정한다.
-### 아직 jest를 설치하지 않았지만, 설치하여 사용할 예정이기에 jest옵션을 지금 추가해준다.
+##### 아직 jest를 설치하지 않았지만, 설치하여 사용할 예정이기에 jest옵션을 지금 추가해준다.
 ```bash
 module.exports = {
 	env: {
