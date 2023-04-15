@@ -22,7 +22,7 @@ cd my-app
 npm init -y
 ```
 4. 프로젝트 상위에 .gitignore 파일을 생성한다.
-5. .gitignore 파일안에 <https://www.toptal.com/developers/gitignore/api/node>를 복사하여 넣어준다. (기본적으로 제네레이트 해주는 것이고, 필요한것은 따로 추가해도된다.)
+5. .gitignore 파일안에 <https://www.toptal.com/developers/gitignore/api/node>를 복사하여 넣어준다.   (기본적으로 제네레이트 해주는 것이고, 필요한것은 따로 추가해도된다.)
 6. 타입스크립트 설치 및 설정
 ```bash
 npm i -D typescript
@@ -30,5 +30,9 @@ npx tsc --init
 ```
 7. 생성된 tsconfig.json 파일에 jsx(tsx)를 사용하기 위한 설정을 추가하여 준다.
 ```bash
-  "jsx": "react-jsx" /* Specify what JSX code is generated. */,
+  {
+     "compilerOptions": {
+        "jsx": "react-jsx" /* Specify what JSX code is generated. */,
+     }
+  }
 ```
