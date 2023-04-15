@@ -63,7 +63,8 @@ You can also run this command directly using 'npm init @eslint/config'.
 ❯ React
   Vue.js
   None of these
-  ? Does your project use TypeScript?  No / › Yes
+
+? Does your project use TypeScript?  No / › Yes
 
 ? Where does your code run? …  (Press <space> to select, <a> to toggle all, <i> to invert selection)
 ✔ Browser
@@ -150,4 +151,72 @@ npm i -D @types/react @types/react-dom
 npm i -D jest @types/jest @swc/core @swc/jest \
     jest-environment-jsdom \
     @testing-library/react @testing-library/jest-dom
+```
+
+13. jset.config.js 를 생성하고, SWC와 Typescript를 테스트 할 수 있게 세팅한다.
+```bash
+touch jest.config.js
+
+<!--jest.config.js-->
+module.exports = {
+  testEnvironment: 'jsdom',
+  setupFilesAfterEnv: [
+    '@testing-library/jest-dom/extend-expect',
+    './jest.setup',
+  ],
+  transform: {
+    '^.+\\.(t|j)sx?$': ['@swc/jest', {
+      jsc: {
+        parser: {
+          syntax: 'typescript',
+          jsx: true,
+          decorators: true,
+        },
+        transform: {
+          react: {
+            runtime: 'automatic',
+          },
+        },
+      },
+    }],
+  },
+  testPathIgnorePatterns: [
+    '<rootDir>/node_modules/',
+    '<rootDir>/dist/',
+  ],
+};
+```
+
+14. Parcel을 설치합니다.
+```bash
+npm i -D parcel
+```
+
+15. package.json의 script부분의 npm 명령어를 수정한다.   
+start: 8080포트로 프로젝트 실행
+build: parcel을 사용하여 빌드 - 빌드된 파일들이 dist폴더 안에 생성
+check: 컴파일 결과 없이 타입만 체크
+lint: .js,.jsx,.ts,.tsx 폴더의 lint 수정
+test: jest로 test 실행
+coverage: test할 파일범위 지정
+watch:test: 파일이 수정될 때마다 test 자동실행
+
+```bash
+  "scripts": {
+    "start": "parcel --port 8080",
+    "build": "parcel build",
+    "check": "tsc --noEmit",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
+    "test": "jest",
+    "coverage": "jest --coverage --coverage-reporters html",
+    "watch:test": "jest --watchAll"
+  },
+```
+
+16. 프로젝트 파일 생성
+```bash
+touch index.html
+
+<!-- index.html>
+<p>Hello World!</p>
 ```
