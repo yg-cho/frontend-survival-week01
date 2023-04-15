@@ -12,5 +12,7 @@
 ### TypeScript + React + Jest + ESLint + Parcel 개발 환경 세팅
 
 1. 먼저, 프로젝트 폴더를 준비한다.
->    ```mkdir my-app```
->    ```cd my-app```
+```bash
+mkdir my-app
+cd my-app
+```
