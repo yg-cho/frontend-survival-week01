@@ -37,7 +37,7 @@ npx tsc --init
 ```bash
   {
      "compilerOptions": {
-        "jsx": "react-jsx" /* Specify what JSX code is generated. */,
+        "jsx": "preserve"
      }
   }
 ```
@@ -47,7 +47,52 @@ ESLint 확장프로그램도 같이 설치한다.
 ```bash
 npm i -D eslint
 npx eslint --init
+
+You can also run this command directly using 'npm init @eslint/config'.
+? How would you like to use ESLint? … 
+  To check syntax only
+  To check syntax and find problems
+❯ To check syntax, find problems, and enforce code style
+
+? What type of modules does your project use? … 
+❯ JavaScript modules (import/export)
+  CommonJS (require/exports)
+  None of these
+
+? Which framework does your project use? … 
+❯ React
+  Vue.js
+  None of these
+  ? Does your project use TypeScript?  No / › Yes
+
+? Where does your code run? …  (Press <space> to select, <a> to toggle all, <i> to invert selection)
+✔ Browser
+  Node
+
+? How would you like to define a style for your project? … 
+❯ Use a popular style guide
+  Answer questions about your style
+
+? Which style guide do you want to follow? … 
+  Standard: https://github.com/standard/eslint-config-standard-with-typescript
+❯ XO: https://github.com/xojs/eslint-config-xo-typescript
+
+? What format do you want your config file to be in? … 
+❯ JavaScript
+  YAML
+  JSON
+
+eslint-plugin-react@latest eslint-config-xo@latest eslint@>=8.0.0 eslint-config-xo-typescript@latest @typescript-eslint/eslint-plugin@>=5.57.0 @typescript-eslint/parser@>=5.57.0 typescript@>=4.4
+? Would you like to install them now?  No / › Yes  
+
+? Which package manager do you want to use? … 
+❯ npm
+  yarn
+  pnpm
+
 ```
+
+
 
 9. .eslintrc.js 파일을 수정한다.   
 아직 jest를 설치하지 않았지만, 설치하여 사용할 예정이기에 jest옵션을 지금 추가해준다.
@@ -96,5 +141,13 @@ module.exports = {
 11. React 설치
 ```bash
 npm i react react-dom
-npm i -D@types/react @types/react-dom
+npm i -D @types/react @types/react-dom
+```
+
+12. 테스팅도구(Jest) 설치   
+여기서 사용한 \ 는 터미널에서 개행문자를 없는 것으로 간주하는 기능을 사용한 것이다.
+```bash
+npm i -D jest @types/jest @swc/core @swc/jest \
+    jest-environment-jsdom \
+    @testing-library/react @testing-library/jest-dom
 ```
