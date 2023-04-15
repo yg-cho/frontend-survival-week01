@@ -157,7 +157,7 @@ npm i -D jest @types/jest @swc/core @swc/jest \
 ```bash
 touch jest.config.js
 
-<!--jest.config.js-->
+<!-- jest.config.js -->
 module.exports = {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: [
@@ -217,6 +217,6 @@ watch:test: 파일이 수정될 때마다 test 자동실행
 ```bash
 touch index.html
 
-<!-- index.html>
+<!-- index.html -->
 <p>Hello World!</p>
 ```
