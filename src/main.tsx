@@ -1,12 +1,5 @@
 import ReactDOM from 'react-dom/client';
-
-function App() {
-	return (
-		<div>
-			<p>Hello World!</p>
-		</div>
-	);
-}
+import App from './App';
 
 const element = document.getElementById('root');
 
