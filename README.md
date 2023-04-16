@@ -220,3 +220,6 @@ touch index.html
 <!-- index.html -->
 <p>Hello World!</p>
 ```
+
+17. npm run start로 서버 실행시 서버가 실행되는 것을 볼 수 있다.
+
