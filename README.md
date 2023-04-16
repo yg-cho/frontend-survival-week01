@@ -72,7 +72,7 @@ You can also run this command directly using 'npm init @eslint/config'.
 
 ? Does your project use TypeScript?  No / › Yes
 
-? Where does your code run? …  (Press <space> to select, <a> to toggle all, <i> to invert selection)
+? Where does your code run?
 ✔ Browser
   Node
 
@@ -89,7 +89,7 @@ You can also run this command directly using 'npm init @eslint/config'.
   YAML
   JSON
 
-eslint-plugin-react@latest eslint-config-xo@latest eslint@>=8.0.0 eslint-config-xo-typescript@latest @typescript-eslint/eslint-plugin@>=5.57.0 @typescript-eslint/parser@>=5.57.0 typescript@>=4.4
+
 ? Would you like to install them now?  No / › Yes
 
 ? Which package manager do you want to use? …
