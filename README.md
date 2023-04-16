@@ -24,7 +24,7 @@ npm init -y
 ```
 4. 프로젝트 상위에 .gitignore 파일을 생성한다.
 
-5. .gitignore 파일안에 <https://www.toptal.com/developers/gitignore/api/node>를 복사하여 넣어준다.   
+5. .gitignore 파일안에 <https://www.toptal.com/developers/gitignore/api/node>를 복사하여 넣어준다.
 (기본적으로 제네레이트 해주는 것이고, 필요한것은 따로 추가해도된다.)
 
 6. 타입스크립트 설치 및 설정
@@ -49,17 +49,17 @@ npm i -D eslint
 npx eslint --init
 
 You can also run this command directly using 'npm init @eslint/config'.
-? How would you like to use ESLint? … 
+? How would you like to use ESLint? …
   To check syntax only
   To check syntax and find problems
 ❯ To check syntax, find problems, and enforce code style
 
-? What type of modules does your project use? … 
+? What type of modules does your project use? …
 ❯ JavaScript modules (import/export)
   CommonJS (require/exports)
   None of these
 
-? Which framework does your project use? … 
+? Which framework does your project use? …
 ❯ React
   Vue.js
   None of these
@@ -70,23 +70,23 @@ You can also run this command directly using 'npm init @eslint/config'.
 ✔ Browser
   Node
 
-? How would you like to define a style for your project? … 
+? How would you like to define a style for your project? …
 ❯ Use a popular style guide
   Answer questions about your style
 
-? Which style guide do you want to follow? … 
+? Which style guide do you want to follow? …
   Standard: https://github.com/standard/eslint-config-standard-with-typescript
 ❯ XO: https://github.com/xojs/eslint-config-xo-typescript
 
-? What format do you want your config file to be in? … 
+? What format do you want your config file to be in? …
 ❯ JavaScript
   YAML
   JSON
 
 eslint-plugin-react@latest eslint-config-xo@latest eslint@>=8.0.0 eslint-config-xo-typescript@latest @typescript-eslint/eslint-plugin@>=5.57.0 @typescript-eslint/parser@>=5.57.0 typescript@>=4.4
-? Would you like to install them now?  No / › Yes  
+? Would you like to install them now?  No / › Yes
 
-? Which package manager do you want to use? … 
+? Which package manager do you want to use? …
 ❯ npm
   yarn
   pnpm
@@ -95,7 +95,7 @@ eslint-plugin-react@latest eslint-config-xo@latest eslint@>=8.0.0 eslint-config-
 
 
 
-9. .eslintrc.js 파일을 수정한다.   
+9. .eslintrc.js 파일을 수정한다.
 아직 jest를 설치하지 않았지만, 설치하여 사용할 예정이기에 jest옵션을 지금 추가해준다.
 ```bash
 module.exports = {
@@ -145,7 +145,7 @@ npm i react react-dom
 npm i -D @types/react @types/react-dom
 ```
 
-12. 테스팅도구(Jest) 설치   
+12. 테스팅도구(Jest) 설치
 여기서 사용한 \ 는 터미널에서 개행문자를 없는 것으로 간주하는 기능을 사용한 것이다.
 ```bash
 npm i -D jest @types/jest @swc/core @swc/jest \
@@ -192,7 +192,7 @@ module.exports = {
 npm i -D parcel
 ```
 
-15. package.json의 script부분의 npm 명령어를 수정한다.   
+15. package.json의 script부분의 npm 명령어를 수정한다.
 start: 8080포트로 프로젝트 실행
 build: parcel을 사용하여 빌드 - 빌드된 파일들이 dist폴더 안에 생성
 check: 컴파일 결과 없이 타입만 체크
